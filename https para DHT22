@@ -34,7 +34,7 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
   // Cambiar datos para AP, SSID y contraseña
-  WiFiMulti.addAP("INTRANET", "Ish00pi71");
+  WiFiMulti.addAP("INTRANET", "Passw0rd");
 }
 
 void loop() {
@@ -55,7 +55,7 @@ void loop() {
 
     Serial.print("[HTTPS] begin...\n");
     // Hacer conexion https y pasar cadena POST
-    if (https.begin(*client, "https://momai.iztacala.unam.mx/data/datalogger.php?temp=" + String(temperature) + "&humidity=" + String(humidity) + "&device=F3667BAA")) {  // HTTPS
+    if (https.begin(*client, "https://132.247.66.122/data/datalogger.php?temp=" + String(temperature) + "&humidity=" + String(humidity) + "&device=F3667BAA")) {  // HTTPS
 
       Serial.print("[HTTPS] GET...\n");
       // start connection and send HTTP header
